@@ -1,0 +1,146 @@
+.table_section {
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  margin-top: 24px;
+
+  .table_header_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  input[type="search"] {
+    border: 1px solid gray;
+    border-radius: 5px;
+  }
+
+  input[type="search"]:focus-within {
+    outline: 1.5px solid #2d7474;
+  }
+
+  .search_bar {
+    height: 34px;
+    border: 0;
+  }
+
+  .search_bar:focus-within {
+    outline: none;
+  }
+
+  .filter_container {
+    position: relative;
+  }
+
+  .filter_btn {
+    padding: 7px 10px;
+    background: none;
+    border: 1px solid gray;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .filter_btn:hover {
+    background-color: #dcdcdc38;
+    cursor: pointer;
+  }
+
+  .fa-angle-down {
+    margin-left: 5px;
+  }
+
+  .filter_container {
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+    border-radius: 5px;
+    padding: 14px 18px;
+    background: #f1f5f9;
+    margin-top: 15px;
+  }
+
+  label {
+    text-wrap: nowrap;
+  }
+
+  .filter_text {
+    color: gray;
+  }
+
+  .table_container {
+    margin-top: 15px;
+    border-radius: 10px;
+    overflow-x: auto;
+  }
+
+  .table_status_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+    padding: 32px 16px;
+  }
+
+  .table_message_container {
+    display: flex;
+    justify-content: center;
+    margin-block: 30px 10px;
+  }
+
+  .table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #EEEEEE;
+    min-width: 700px;
+    text-wrap: nowrap;
+  }
+
+  .table thead {
+    background-color: #1d293d;
+    color: white;
+  }
+
+  .table th {
+    padding: 20px 12px;
+    font-weight: normal;
+  }
+
+  .table_header_btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: none;
+    border: none;
+    color: inherit;
+    cursor: pointer;
+    padding: 0;
+  }
+
+  .table th,
+  .table td {
+    text-align: center;
+    border-bottom: 1px solid #EEEEEE;
+  }
+
+  .table td {
+    padding: 16px 12px;
+  }
+
+  .table tbody tr:hover {
+    background: #EEEEEE;
+  }
+
+  .edit_button {
+    background-color: transparent;
+    border: none;
+    color: blue;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+
+  .edit_button:focus-visible {
+    outline: 1px solid gray;
+  }
+}

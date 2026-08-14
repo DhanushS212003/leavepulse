@@ -1,0 +1,39 @@
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10px;
+  padding: 24px 40px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  margin-top: 32px;
+  flex-wrap: wrap;
+  gap: 16px;
+
+  .copyright {
+    color: gray;
+    font-weight: 500;
+    font-size: 14px;
+  }
+
+  .footer_links_container {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+  }
+
+  .fa-facebook,
+  .fa-instagram,
+  .fa-twitter,
+  .fa-github {
+    font-size: 22px;
+    color: gray;
+  }
+
+  .fa-facebook:hover,
+  .fa-instagram:hover,
+  .fa-twitter:hover,
+  .fa-github:hover {
+    color: darkslategray;
+    cursor: pointer;
+  }
+}

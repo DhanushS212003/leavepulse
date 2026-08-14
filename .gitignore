@@ -1,0 +1,51 @@
+# =========================
+# LEAVEPULSE API
+# =========================
+leavepulse-api/venv/
+leavepulse-api/env/
+leavepulse-api/.venv/
+
+leavepulse-api/__pycache__/
+leavepulse-api/**/__pycache__/
+*.py[cod]
+
+leavepulse-api/*.log
+leavepulse-api/db.sqlite3
+leavepulse-api/db.sqlite3-journal
+
+# Environment variables
+leavepulse-api/.env
+
+# Django generated files
+leavepulse-api/media/
+leavepulse-api/staticfiles/
+
+# Attachments
+leavepulse-api/leave_attachments/
+
+# =========================
+# LEAVEPULSE APP
+# =========================
+leavepulse-app/node_modules/
+leavepulse-app/dist/
+leavepulse-app/build/
+
+# Environment variables
+leavepulse-app/.env
+leavepulse-app/.env.local
+leavepulse-app/.env.development.local
+leavepulse-app/.env.test.local
+leavepulse-app/.env.production.local
+
+
+# =========================
+# IDE
+# =========================
+.vscode/
+.idea/
+
+
+# =========================
+# OS
+# =========================
+.DS_Store

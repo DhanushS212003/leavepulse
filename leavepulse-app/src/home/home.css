@@ -1,0 +1,96 @@
+.dashboard_section {
+  .banner_container {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    align-items: center;
+    padding: 15px 30px;
+    border-radius: 10px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    gap: 30px;
+  }
+
+  .banner_img {
+    width: 250px;
+  }
+
+  .welcome_tag {
+    color: gray;
+  }
+
+  .banner_user_name {
+    margin-block: 12px;
+  }
+
+  .banner_line {
+    line-height: 24px;
+    color: gray;
+    font-size: 14px;
+  }
+
+  .info_containers {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    margin-top: 24px;
+    gap: 30px;
+  }
+
+  .info_container {
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  }
+
+  .count_container {
+    padding: 16px;
+    width: 66%;
+  }
+
+  .icon_container {
+    background-color: ghostwhite;
+    width: 24%;
+    height: 100%;
+    border-radius: 0px 10px 10px 0px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  }
+
+  .count {
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  .count_title {
+    margin-top: 8px;
+    color: gray;
+  }
+
+  .fa-circle-user,
+  .fa-circle-check,
+  .fa-circle-xmark,
+  .fa-circle-question {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    font-size: 24px;
+    color: gray;
+  }
+
+  .fa-circle-check {
+    color: #00800073;
+  }
+
+  .fa-circle-question {
+    color: #ff8c0078;
+  }
+
+  .fa-circle-xmark {
+    color: #ff000066;
+  }
+
+  @media (max-width: 950px) {
+    .banner_container {
+      grid-template-columns: 1fr;
+    }
+  }
+}
