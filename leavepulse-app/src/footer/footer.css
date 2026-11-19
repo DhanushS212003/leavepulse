@@ -23,7 +23,7 @@
 
   .fa-facebook,
   .fa-instagram,
-  .fa-twitter,
+  .fa-x-twitter,
   .fa-github {
     font-size: 22px;
     color: gray;
@@ -31,7 +31,7 @@
 
   .fa-facebook:hover,
   .fa-instagram:hover,
-  .fa-twitter:hover,
+  .fa-x-twitter:hover,
   .fa-github:hover {
     color: darkslategray;
     cursor: pointer;

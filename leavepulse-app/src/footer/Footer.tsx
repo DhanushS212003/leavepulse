@@ -4,7 +4,7 @@ const Footer = () => {
   const socialMediaIcons = [
     { class: "fa-brands fa-facebook", key: "facebook" },
     { class: "fa-brands fa-instagram", key: "instagram" },
-    { class: "fa-brands fa-twitter", key: "twitter" },
+    { class: "fa-brands fa-x-twitter", key: "twitter" },
     { class: "fa-brands fa-github", key: "github" },
   ];
 
