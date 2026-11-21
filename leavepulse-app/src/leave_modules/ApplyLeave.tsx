@@ -255,6 +255,7 @@ const ApplyLeave = () => {
                 Upload Document {requiresAttachment && <LabelAsterisk />}
               </label>
               <input
+                disabled={true}
                 id="attachment"
                 type="file"
                 accept={ATTACHMENT_ACCEPT}
