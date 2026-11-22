@@ -21,7 +21,4 @@ class User(AbstractUser):
         if self.username.strip() == "":
             raise ValidationError("User name cannot be empty.")
 
-        if self.password.strip() == "":
-            raise ValidationError("Password cannot be empty.")
-
         return True

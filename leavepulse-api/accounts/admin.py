@@ -2,4 +2,43 @@ from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin
 from .models import User
 
-admin.site.register(User, UserAdmin)
+
+@admin.register(User)
+class CustomUserAdmin(UserAdmin):
+
+    add_fieldsets = (
+        (None, {
+            "classes": ("wide",),
+            "fields": (
+                "username",
+                "first_name",
+                "last_name",
+                "email",
+                "password1",
+                "password2",
+            ),
+        }),
+    )
+
+    fieldsets = (
+        (None, {
+            "fields": ("username", "password"),
+        }),
+        ("Personal Information", {
+            "fields": ("first_name", "last_name", "email"),
+        }),
+        ("Permissions", {
+            "fields": (
+                "is_active",
+                "is_staff",
+                "is_superuser",
+                "groups",
+                "user_permissions",
+            ),
+        }),
+        ("Important Dates", {
+            "fields": ("last_login", "date_joined", "created_at", "updated_at"),
+        }),
+    )
+
+    readonly_fields = ("created_at", "updated_at")
