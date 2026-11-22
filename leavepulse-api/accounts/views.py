@@ -6,6 +6,7 @@ from django.contrib.auth import authenticate
 from rest_framework_simplejwt.tokens import RefreshToken
 from rest_framework_simplejwt.exceptions import TokenError
 from employees.models import Employee
+from django.conf import settings
 
 
 @api_view(["POST"])
@@ -30,8 +31,10 @@ def login(request):
         key="refresh_token",
         value=str(refresh),
         httponly=True,
-        secure=False,
-        samesite="Lax",
+        secure=not settings.DEBUG,
+        samesite="None" if not settings.DEBUG else "Lax",
+        max_age=7 * 24 * 60 * 60,
+        path="/",
     )
 
     return response

@@ -26,10 +26,20 @@ const App = () => {
   const refresh = async () => {
     try {
       const response = await refreshToken();
+
       setAccessToken(response.data.access);
-      fetchUser();
+
+      await fetchUser();
     } catch (error) {
-      if (!(error instanceof Error)) return;
+      setAccessToken(null);
+
+      if (!(error instanceof Error)) {
+        showAlert({
+          type: "danger",
+          text: "Something went wrong.",
+        });
+        return;
+      }
 
       if ("status" in error && error.status === 401) {
         showAlert({
@@ -46,6 +56,8 @@ const App = () => {
           text: error.message,
         });
       }
+    } finally {
+      setAuthInitializing(false);
     }
   };
 
@@ -58,8 +70,6 @@ const App = () => {
         type: "danger",
         text: error instanceof Error ? error.message : "Something went wrong.",
       });
-    } finally {
-      setAuthInitializing(false);
     }
   };
 
